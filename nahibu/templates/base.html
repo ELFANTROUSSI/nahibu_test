@@ -16,19 +16,19 @@
     <link rel="icon" href="{% static 'images/favicons/favicon.ico' %}">
 
     {% block css %}
-    
+
 
     <!-- Your stuff: Third-party CSS libraries go here -->
-    
+
     <!-- This file stores project-specific CSS -->
-    
+
     <link href="{% static 'css/project.css' %}" rel="stylesheet">
-    
-    
+
+
     {% endblock %}
 
   <style>
-  
+
 body{
 margin:0;}
 ul.navbar-nav.mr-auto {
@@ -58,7 +58,7 @@ a.nav-link:hover {
 
     <div class="mb-1">
       <nav class="navbar navbar-expand-md navbar-light bg-light">
-        
+
            <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
@@ -85,9 +85,9 @@ a.nav-link:hover {
                 {# URL provided by django-allauth/account/urls.py #}
                 <a id="log-in-link" class="nav-link" href="{% url 'account_login' %}">{% trans "Sign In" %}</a>
               </li>
-	     <li class="nav-item">
+	     <li class="nav-item" style="float:right;margin-right:20px;">
                 {# URL provided by django-allauth/account/urls.py #}
-                <img src="https://nahibu.com/assets/img/logo_black.svg" href="{% url 'home' %}" alt="Nahibu" width="300" height="300">
+                <img src="https://nahibu.com/assets/img/logo_black.svg" href="{% url 'home' %}" alt="Nahibu" width="60" height="60">
               </li>
             {% endif %}
           </ul>
@@ -116,21 +116,20 @@ a.nav-link:hover {
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     {% block javascript %}
-      
+
       <!-- Bootstrap JS and its dependencies-->
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
       <!-- Your stuff: Third-party javascript libraries go here -->
-      
+
 
       <!-- place project specific Javascript in this file -->
-      
+
       <script src="{% static 'js/project.js' %}"></script>
-      
+
 
     {% endblock javascript %}
   </body>
 </html>
- 
